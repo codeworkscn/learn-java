@@ -53,9 +53,13 @@ public class Delegator implements InvocationHandler {
 			for (int i = 0; i < interfaces.length; i++) {
 				if (declaringClass.isAssignableFrom(interfaces[i])) {
 					try {
+						System.out.println("before method " + m.getName());
+
 						return m.invoke(delegates[i], args);
 					} catch (InvocationTargetException e) {
 						throw e.getTargetException();
+					} finally {
+						System.out.println("after method " + m.getName());
 					}
 				}
 			}

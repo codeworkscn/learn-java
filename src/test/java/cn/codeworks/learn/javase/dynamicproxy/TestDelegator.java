@@ -8,6 +8,7 @@ import org.junit.Test;
 
 public class TestDelegator {
 
+	@SuppressWarnings("rawtypes")
 	@Test
 	public void testInvoke() throws BazException {
 		Class[] proxyInterfaces = new Class[] { Foo.class };

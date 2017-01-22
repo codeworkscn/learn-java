@@ -15,7 +15,7 @@ public class FooImpl implements Foo {
 	 * @see cn.codeworks.learn.javase.dynamicproxy.Foo#bar(java.lang.Object)
 	 */
 	public Object bar(Object obj) throws BazException {
-		// TODO Auto-generated method stub
+		System.out.println("bar call in FooImpl");
 		return null;
 	}
 
